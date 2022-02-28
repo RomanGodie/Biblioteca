@@ -5,4 +5,5 @@ import com.ceiba.biblioteca.dominio.dto.RespuestaConsultaPrestamoDto;
 public interface ConsultaPrestamoPuerto {
     RespuestaConsultaPrestamoDto consultarPrestamoEnBaseDatosConId(int id);
     boolean consultarUsuarioPorIdentificacionDeUsuario(String identificacionUsuario);
+    boolean consultaIdExistenteEnBaseDatos(int id);
 }

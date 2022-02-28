@@ -14,7 +14,7 @@ public class ConsultaPrestamoServicioDominio {
     }
 
     public RespuestaConsultaPrestamoDto ejecucionLogicaDeNegocioEnConsulta(int id){
-        if(consultaPrestamoPuerto.consultarPrestamoEnBaseDatosConId(id).getId()==ID_VACIO){
+        if(!consultaPrestamoPuerto.consultaIdExistenteEnBaseDatos(id)){
             throw new ExcepcionDeNegocio(MENSAJE_EXCEPCION_ID_INVALIDO);
         }
         return consultaPrestamoPuerto.consultarPrestamoEnBaseDatosConId(id);

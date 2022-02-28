@@ -37,4 +37,13 @@ public class ConsultaPrestamoPuertoImp implements ConsultaPrestamoPuerto {
                 Integer.class);
         return (existe >= 1);
     }
+
+    @Override
+    public boolean consultaIdExistenteEnBaseDatos(int id) {
+        String sql = "SELECT count(id) FROM prestamo WHERE id = ?";
+        int existe = jdbcTemplate.queryForObject(sql,
+                new Object[]{id},
+                Integer.class);
+        return (existe >= 1);
+    }
 }
