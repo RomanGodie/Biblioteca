@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class RegistroPrestamoServicioAplicacion {
     MapperRegistroPrestamo mapperRegistroPrestamo;
     RegistroPrestamoServicioDominio registroPrestamoServicioDominio;
+    String prueba;
 
     public RespuestaPrestamoDto recibeControladorParaDominio(RegistroPrestamoDto registroPrestamoDto){
         return registroPrestamoServicioDominio.ejecucionLogicaNegocio
